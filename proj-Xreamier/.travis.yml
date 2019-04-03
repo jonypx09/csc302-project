@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "node"
+      services: 
+        - postgresql
+      before_script:
+        - psql -c 'create database gradapp;' -U postgres
+        - psql -c "CREATE USER csc302 WITH PASSWORD 'csc302isfun';" -U postgres
+        - cd services/PGDB
+        - npm install
+      script:
+        - jshint . --exclude node_modules
+    - language: node_js
+      node_js:
+        - "node"
+      services: 
+        - postgresql
+      before_script:
+        - psql -c 'create database gradapp;' -U postgres
+        - psql -c "CREATE USER csc302 WITH PASSWORD 'csc302isfun';" -U postgres
+        - cd services/PGDB
+        - npm install
+        - cd ../AUTH
+        - npm install
+      script:
+        - npm test
+        - jshint . --exclude node_modules
+    - language: node_js
+      node_js:
+        - "node"
+      services: 
+        - postgresql
+      before_script:
+        - psql -c 'create database gradapp;' -U postgres
+        - psql -c "CREATE USER csc302 WITH PASSWORD 'csc302isfun';" -U postgres
+        - cd services/MAILINATOR
+        - npm install
+      script:
+        - jshint . --exclude node_modules
+    - language: node_js
+      node_js:
+        - "node"
+      services: 
+        - postgresql
+      before_script:
+        - psql -c 'create database gradapp;' -U postgres
+        - psql -c "CREATE USER csc302 WITH PASSWORD 'csc302isfun';" -U postgres
+        - cd services/PGDB
+        - npm install
+        - cd ../TASKS
+        - npm install
+      script:
+        - npm test
+        - jshint . --exclude node_modules
+notifications:
+  email:
+    - iam@danielchan.me

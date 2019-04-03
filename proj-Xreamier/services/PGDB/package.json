@@ -1,0 +1,29 @@
+{
+    "name": "pgdb",
+    "version": "1.0.0",
+    "description": "PostgreSQL database microservice for the graduate ticketing application.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jshint . --exclude node_modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/csc302-winter-2018/proj-Xreamier/branches"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jshint": "^2.9.5"
+    },
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "dotenv": "^5.0.1",
+        "npm": "^5.7.1",
+        "passport-local": "^1.0.0",
+        "pg": "^7.4.1",
+        "pg-hstore": "^2.3.2",
+        "sequelize": "^4.37.1",
+        "uuid": "^3.2.1"
+    }
+}

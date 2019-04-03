@@ -1,0 +1,27 @@
+<% include header %>
+
+<div class="container">
+    <h1 id="App-title">Create Task</h1>
+    <form id="login" class="text-center" name="task" method="post" action="/portal/task">
+        <div class="form-group row">
+            <label class="col-2 col-form-label" for="username">Name of Task:</label>
+            <div class="col-10">
+                <input class="form-control col-10" name="name" type="text"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label" for="password">Details of Task:</label>
+            <div class="col-10">
+                <input class="form-control col-10" name="details" type="text"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="btn" type="submit" value="Create Task"/>
+        </div>
+        <div>
+            <a class="btn" href="/">Return To Home</a>
+        </div>
+    </form>
+</div>
+
+<% include footer %>

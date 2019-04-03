@@ -1,0 +1,29 @@
+{
+    "development": {
+        "username": "csc302",
+        "password": "csc302isfun",
+        "database": "gradapp",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "dialect": "postgres",
+        "logging": false
+    },
+    "test": {
+        "username": "csc302",
+        "password": "csc302isfun",
+        "database": "gradapp",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "dialect": "postgres",
+        "logging": false
+    },
+    "production": {
+        "username": "csc302",
+        "password": "csc302isfun",
+        "database": "gradapp",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "dialect": "postgres",
+        "logging": false
+    }
+}
